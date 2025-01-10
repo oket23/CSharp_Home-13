@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Home_13
+﻿namespace Home_13
 {
     public partial class task4Form : Form
     {
@@ -42,7 +32,6 @@ namespace Home_13
             reversRtb.Text = text;
 
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.Description = "Select folder to create file";
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {

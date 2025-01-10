@@ -85,7 +85,7 @@
             // 
             taskLb.AutoSize = true;
             taskLb.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            taskLb.Location = new Point(294, 9);
+            taskLb.Location = new Point(275, 9);
             taskLb.Name = "taskLb";
             taskLb.Size = new Size(78, 32);
             taskLb.TabIndex = 12;

@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             backToMenuButton = new Button();
-            label1 = new Label();
+            taskLb = new Label();
+            generateNumRtb = new RichTextBox();
+            generateNumLb = new Label();
+            generateNumBtn = new Button();
+            statsLb = new Label();
+            statsRtb = new RichTextBox();
             SuspendLayout();
             // 
             // backToMenuButton
@@ -43,22 +48,77 @@
             backToMenuButton.UseVisualStyleBackColor = true;
             backToMenuButton.Click += backToMenuButton_Click;
             // 
-            // label1
+            // taskLb
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(352, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 15);
-            label1.TabIndex = 8;
-            label1.Text = "Taks 5 comming...";
+            taskLb.AutoSize = true;
+            taskLb.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            taskLb.Location = new Point(308, 9);
+            taskLb.Name = "taskLb";
+            taskLb.Size = new Size(85, 32);
+            taskLb.TabIndex = 8;
+            taskLb.Text = "Taks 5 ";
+            // 
+            // generateNumRtb
+            // 
+            generateNumRtb.Location = new Point(12, 104);
+            generateNumRtb.Name = "generateNumRtb";
+            generateNumRtb.ReadOnly = true;
+            generateNumRtb.Size = new Size(314, 269);
+            generateNumRtb.TabIndex = 10;
+            generateNumRtb.Text = "";
+            // 
+            // generateNumLb
+            // 
+            generateNumLb.AutoSize = true;
+            generateNumLb.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            generateNumLb.Location = new Point(12, 69);
+            generateNumLb.Name = "generateNumLb";
+            generateNumLb.Size = new Size(231, 32);
+            generateNumLb.TabIndex = 8;
+            generateNumLb.Text = "Generated numbers:";
+            // 
+            // generateNumBtn
+            // 
+            generateNumBtn.FlatStyle = FlatStyle.Flat;
+            generateNumBtn.Location = new Point(557, 406);
+            generateNumBtn.Name = "generateNumBtn";
+            generateNumBtn.Size = new Size(129, 32);
+            generateNumBtn.TabIndex = 11;
+            generateNumBtn.Text = "Generate numbers";
+            generateNumBtn.UseVisualStyleBackColor = true;
+            generateNumBtn.Click += generateNumBtn_Click;
+            // 
+            // statsLb
+            // 
+            statsLb.AutoSize = true;
+            statsLb.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            statsLb.Location = new Point(372, 69);
+            statsLb.Name = "statsLb";
+            statsLb.Size = new Size(69, 32);
+            statsLb.TabIndex = 8;
+            statsLb.Text = "Stats:";
+            // 
+            // statsRtb
+            // 
+            statsRtb.Location = new Point(372, 104);
+            statsRtb.Name = "statsRtb";
+            statsRtb.ReadOnly = true;
+            statsRtb.Size = new Size(314, 269);
+            statsRtb.TabIndex = 10;
+            statsRtb.Text = "";
             // 
             // task5Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(698, 450);
+            Controls.Add(generateNumBtn);
+            Controls.Add(statsRtb);
+            Controls.Add(generateNumRtb);
             Controls.Add(backToMenuButton);
-            Controls.Add(label1);
+            Controls.Add(statsLb);
+            Controls.Add(generateNumLb);
+            Controls.Add(taskLb);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "task5Form";
@@ -73,6 +133,11 @@
         #endregion
 
         private Button backToMenuButton;
-        private Label label1;
+        private Label taskLb;
+        private RichTextBox generateNumRtb;
+        private Label generateNumLb;
+        private Button generateNumBtn;
+        private Label statsLb;
+        private RichTextBox statsRtb;
     }
 }
