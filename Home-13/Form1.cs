@@ -33,14 +33,10 @@ namespace Home_13
             SwapForm(taks5);
         }
 
-
-
         private void SwapForm(Form form)
         {
             form.Show();
             Hide();
         }
-
-
     }
 }

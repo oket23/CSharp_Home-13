@@ -12,10 +12,10 @@ namespace Home_13
 {
     public partial class task1Form : Form
     {
-        private mainMenu menu;
+        private mainMenu _menu;
         public task1Form(mainMenu mainMenu)
         {
-            menu = mainMenu;
+            _menu = mainMenu;
             InitializeComponent();
         }
 
@@ -26,17 +26,13 @@ namespace Home_13
 
         private void backToMenuButton_Click(object sender, EventArgs e)
         {
-            menu.Show();
+            _menu.Show();
             Hide();
         }
-
-
 
         private void generateButton_Click(object sender, EventArgs e)
         {
             GenerateNumbesr();
-            
-
         }
 
         private void GenerateNumbesr()
@@ -78,6 +74,7 @@ namespace Home_13
             {
                 primeNumbersRtb.Text += primes[i].ToString() + " ";
             }
+
             for (int i = 0; i < fibs.Count; i++)
             {
                 fibonacciNumbersRtb.Text += fibs[i].ToString() + " ";
