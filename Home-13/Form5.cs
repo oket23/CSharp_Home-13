@@ -12,10 +12,11 @@ namespace Home_13
 {
     public partial class task4Form : Form
     {
-        private mainMenu menu;
+        private mainMenu _menu;
+        private string _path;
         public task4Form(mainMenu mainMenu)
         {
-            menu = mainMenu;
+            _menu = mainMenu;
             InitializeComponent();
         }
 
@@ -26,8 +27,59 @@ namespace Home_13
 
         private void backToMenuButton_Click(object sender, EventArgs e)
         {
-            menu.Show();
+            _menu.Show();
             Hide();
+        }
+
+        private void reverseBtn_Click(object sender, EventArgs e)
+        {
+            reversRtb.Clear();
+            statsRtb.Clear();
+
+            string text = new string(userRtb.Text.Reverse().ToArray());
+            string copyPath = "";
+
+            reversRtb.Text = text;
+
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "Select folder to create file";
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                copyPath = Path.Combine(folderBrowserDialog.SelectedPath,"CopyFile.txt");
+                using (var fs = new FileStream(copyPath, FileMode.Create, FileAccess.Write))
+                {
+                    using (var sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine(reversRtb.Text);
+                    }
+                }
+                MessageBox.Show("Сopy of file has been created successfully");
+                statsRtb.Text = $"Сopy of the file was created in {copyPath}";
+            }
+        }
+
+        private void userSelectBtn_Click(object sender, EventArgs e)
+        {
+            userRtb.Clear();
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select file";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                _path = openFileDialog.FileName;
+                using (var fs = new FileStream(_path, FileMode.Open, FileAccess.Read))
+                {
+                    using (var sr = new StreamReader(fs))
+                    {
+                        while (!sr.EndOfStream)
+                        {
+                            userRtb.Text += sr.ReadLine();
+                        }
+                    }
+                }
+            }
         }
     }
 }

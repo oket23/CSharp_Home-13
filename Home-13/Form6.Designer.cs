@@ -46,11 +46,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(404, 122);
+            label1.Location = new Point(352, 121);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(102, 15);
             label1.TabIndex = 8;
-            label1.Text = "Taks 5";
+            label1.Text = "Taks 5 comming...";
             // 
             // task5Form
             // 
