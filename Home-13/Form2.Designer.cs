@@ -96,7 +96,6 @@
             allNumbersRtb.Size = new Size(391, 141);
             allNumbersRtb.TabIndex = 4;
             allNumbersRtb.Text = "";
-            allNumbersRtb.TextChanged += allNumbersRtb_TextChanged;
             // 
             // primeNumbersLb
             // 
@@ -120,7 +119,6 @@
             primeNumbersRtb.Size = new Size(391, 141);
             primeNumbersRtb.TabIndex = 4;
             primeNumbersRtb.Text = "";
-            primeNumbersRtb.TextChanged += allNumbersRtb_TextChanged;
             // 
             // FibonacciNumbersLb
             // 
@@ -144,7 +142,6 @@
             fibonacciNumbersRtb.Size = new Size(391, 141);
             fibonacciNumbersRtb.TabIndex = 4;
             fibonacciNumbersRtb.Text = "";
-            fibonacciNumbersRtb.TextChanged += allNumbersRtb_TextChanged;
             // 
             // statsLb
             // 
@@ -168,7 +165,6 @@
             statsRtb.Size = new Size(391, 141);
             statsRtb.TabIndex = 4;
             statsRtb.Text = "";
-            statsRtb.TextChanged += allNumbersRtb_TextChanged;
             // 
             // task1Form
             // 
